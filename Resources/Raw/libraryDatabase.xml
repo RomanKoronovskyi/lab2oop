@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<libraryDatabase>
+	<book BK_ID="1" BK_NAME="Програмування"
+   BK_INFO="Інформація про Програмування" BK_DC="1"
+   DC_NAME="ПРОГРАМУВАННЯ">
+		<author AU_ID="1" AU_NAME="Зубенко В.В." />
+		<author AU_ID="2" AU_NAME="Омельчук Л.Л." />
+	</book>
+	<book BK_ID="2" BK_NAME="Математична логiка"
+   BK_INFO="Інформація про МЛ" BK_DC="2" DC_NAME="Логiка">
+		<author AU_ID="4" AU_NAME="Нiкiтченко М.С." />
+		<author AU_ID="4" AU_NAME="Шкiльняк С.С." />
+	</book>
+	<book BK_ID="2" BK_NAME="Математична логiка"
+   BK_INFO="Інформація про МЛ" BK_DC="2" DC_NAME="Логiка">
+		<author AU_ID="4" AU_NAME="Нiкiтченко М.С." />
+		<author AU_ID="4" AU_NAME="Шкiльняк С.С." />
+	</book>
+	<book BK_ID="3" BK_NAME="Програмна iнженерiя"
+   BK_INFO="Інформація про Програмну iнженерiю" BK_DC="1"
+   DC_NAME="ПРОГРАМУВАННЯ">
+		<author AU_ID="5" AU_NAME="Лавріщева К.М." />
+	</book>
+</libraryDatabase>

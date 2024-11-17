@@ -1,0 +1,58 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lab2.MainPage"
+             Title="">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30,60,30,30">
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button x:Name="ChooseFileButton" Text="Вибрати XML файл" Clicked="OnChooseFileClicked" />
+                <Button x:Name="TransformToHtmlButton" Text="Трансформувати в HTML" Clicked="OnTransformToHtmlClicked" />
+                <Button x:Name="InformationButton" Text="Інформація" Clicked="OnInformationClicked" />
+                <Button x:Name="ExitButton" Text="Вихід" Clicked="OnExitClicked" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button x:Name="DomButton" Text="DOM" IsVisible="False" Clicked="OnDomParseClicked" />
+                <Button x:Name="SaxButton" Text="SAX" IsVisible="False" Clicked="OnSaxParseClicked" />
+                <Button x:Name="LinqButton" Text="LINQ" IsVisible="False" Clicked="OnLinqParseClicked" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button x:Name="SortByBkNameButton" Text="сортувати за предметом" IsVisible="False" Clicked="OnSortByBkNameClicked" />
+                <Button x:Name="SortByBkInfoButton" Text="сортувати за інформацією про предмет" IsVisible="False" Clicked="OnSortByBkInfoClicked" />
+                <Button x:Name="SortByAuNameButton" Text="сортувати за автором" IsVisible="False" Clicked="OnSortByAuNameClicked" />
+            </HorizontalStackLayout>
+
+            <Picker x:Name="AuthorPicker" IsVisible="False" SelectedIndexChanged="OnAuthorSelected" />
+            <Picker x:Name="SubjectPicker" IsVisible="False" SelectedIndexChanged="OnSubjectSelected" />
+            <Picker x:Name="InfoPicker" IsVisible="False" SelectedIndexChanged="OnInfoSelected" />
+
+            <CollectionView x:Name="BooksCollectionView" IsVisible="True">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="4*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Text="{Binding Name}" HorizontalOptions="Start" VerticalOptions="Center" />
+
+                            <Label Grid.Column="1" Text="{Binding Info}" HorizontalOptions="Start" VerticalOptions="Center" />
+
+                            <Label Grid.Column="2" Text="{Binding Subject}" HorizontalOptions="Start" VerticalOptions="Center" />
+
+                            <Label Grid.Column="3" Text="{Binding Authors}" HorizontalOptions="Start" VerticalOptions="Center" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+            <Label x:Name="OutputLabel" FontSize="18" HorizontalOptions="Center" LineBreakMode="WordWrap" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
